@@ -21,7 +21,7 @@ describe("/student API", () => {
 
 	/**
 	 * Lastly - we need a work-around - create one last test & make a request.
-	 * See https://github.com/mpashkovskiy/express-oas-generator/issues/50
+	 * See https://github.com/mpashkovskiy/express-oas-api/issues/50
 	 */
 	it("workaround", async () => {
 		await supertest.get(`/api/v1`);

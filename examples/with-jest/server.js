@@ -1,11 +1,11 @@
 const express = require('express');
-const { handleResponses, handleRequests } = require('express-oas-generator');
+const { handleResponses, handleRequests } = require('express-oas-api');
 
-/** work-around until we fix https://github.com/mpashkovskiy/express-oas-generator/issues/51 */
+/** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/51 */
 const mkdirp = require('mkdirp');
 const path = require('path');
 
-/** work-around until we fix https://github.com/mpashkovskiy/express-oas-generator/issues/52 */
+/** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/52 */
 const fs = require('fs');
 
 const app = express();
@@ -14,10 +14,10 @@ const openAPIFilePath = './path/to/file.json';
 
 /** handle the responses */
 if (process.env.NODE_ENV !== 'production') {
-  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-generator/issues/51 */
+  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/51 */
   mkdirp.sync(path.parse(openAPIFilePath).dir);
 
-  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-generator/issues/52 */
+  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/52 */
   let predefinedSpec;
 
   try {
@@ -45,7 +45,7 @@ app.get('/api/v1/student', (_req, res, next) => {
   try {
     /**
 	 * the data here does not matter - we just want to create a simple response
-	 * from which express-oas-generator can create documentation
+	 * from which express-oas-api can create documentation
 	 */
     const student = {
       id: 1337,
@@ -64,7 +64,7 @@ app.get('/api/v1/student', (_req, res, next) => {
   }
 });
 
-/** lastly - add the express-oas-generator request handler (MUST be the LAST middleware) */
+/** lastly - add the express-oas-api request handler (MUST be the LAST middleware) */
 if (process.env.NODE_ENV !== 'production') {
   handleRequests();
 }

@@ -26,7 +26,7 @@ right after initializing the express app,
 2. and place the REQUEST middleware LAST,
 inside the app.listen callback
 
-For more information, see https://github.com/mpashkovskiy/express-oas-generator#Advanced-usage-recommended
+For more information, see https://github.com/mpashkovskiy/express-oas-api#Advanced-usage-recommended
 `;
 
 let packageJsonPath = `${process.cwd()}/package.json`;
@@ -252,7 +252,7 @@ function handleResponses(expressApp, options = { swaggerUiServePath: 'api-docs',
           if (err) {
             /**
 			 * TODO - this is broken - the error will be caught and ignored in the catch below.
-			 * See https://github.com/mpashkovskiy/express-oas-generator/pull/39#discussion_r340026645
+			 * See https://github.com/mpashkovskiy/express-oas-api/pull/39#discussion_r340026645
 			 */
             throw new Error(`Cannot store the specification into ${fullPath} because of ${err.message}`);
           }
@@ -313,7 +313,7 @@ function handleRequests() {
  * I think we should be checking for falsy values, not only `undefined` ones.
  *
  * 3. (Breaking) Use object for optional parameters:
- * https://github.com/mpashkovskiy/express-oas-generator/issues/35
+ * https://github.com/mpashkovskiy/express-oas-api/issues/35
  *
  */
 /**

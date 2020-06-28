@@ -1,4 +1,4 @@
-# express-oas-generator with jest
+# express-oas-api with jest
 
 Adopted from https://github.com/sarpik/turbo-schedule
 
