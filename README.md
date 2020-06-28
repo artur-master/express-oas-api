@@ -2,7 +2,7 @@
 
 [![npm package](https://nodei.co/npm/express-oas-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/express-oas-api/)
 
-[![Build Status](https://travis-ci.org/mpashkovskiy/express-oas-api.svg?branch=master)](https://travis-ci.org/mpashkovskiy/express-oas-api) [![Coverage Status](https://coveralls.io/repos/github/mpashkovskiy/express-oas-api/badge.svg)](https://coveralls.io/github/mpashkovskiy/express-oas-api) [![Known Vulnerabilities](https://snyk.io/test/github/mpashkovskiy/express-oas-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/mpashkovskiy/express-oas-api?targetFile=package.json)
+[![Build Status](https://travis-ci.org/artur-master/express-oas-api.svg?branch=master)](https://travis-ci.org/artur-master/express-oas-api) [![Coverage Status](https://coveralls.io/repos/github/artur-master/express-oas-api/badge.svg)](https://coveralls.io/github/artur-master/express-oas-api) [![Known Vulnerabilities](https://snyk.io/test/github/artur-master/express-oas-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/artur-master/express-oas-api?targetFile=package.json)
 
 Module to:
 * automatically generate OpenAPI (Swagger) specification for existing ExpressJS 4.x REST API applications;
@@ -10,7 +10,7 @@ Module to:
 
 #### WARNINING!
 Again: goal of the module is to provide baseline specification which should be reviewed and modified before exposing to REST API clients.
-Module should be used in test environment only because it can disclose sensitive information if it is running in production. See [How does it work?](#how-does-it-work) and [comment about usage](https://github.com/mpashkovskiy/express-oas-api/issues/36#issuecomment-553040533) for more info.
+Module should be used in test environment only because it can disclose sensitive information if it is running in production. See [How does it work?](#how-does-it-work) and [comment about usage](https://github.com/artur-master/express-oas-api/issues/36#issuecomment-553040533) for more info.
 
 ## Examples
 

@@ -1,11 +1,11 @@
 const express = require('express');
 const { handleResponses, handleRequests } = require('express-oas-api');
 
-/** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/51 */
+/** work-around until we fix https://github.com/artur-master/express-oas-api/issues/51 */
 const mkdirp = require('mkdirp');
 const path = require('path');
 
-/** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/52 */
+/** work-around until we fix https://github.com/artur-master/express-oas-api/issues/52 */
 const fs = require('fs');
 
 const app = express();
@@ -14,10 +14,10 @@ const openAPIFilePath = './path/to/file.json';
 
 /** handle the responses */
 if (process.env.NODE_ENV !== 'production') {
-  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/51 */
+  /** work-around until we fix https://github.com/artur-master/express-oas-api/issues/51 */
   mkdirp.sync(path.parse(openAPIFilePath).dir);
 
-  /** work-around until we fix https://github.com/mpashkovskiy/express-oas-api/issues/52 */
+  /** work-around until we fix https://github.com/artur-master/express-oas-api/issues/52 */
   let predefinedSpec;
 
   try {
